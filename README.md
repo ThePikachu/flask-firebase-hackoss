@@ -28,4 +28,7 @@ Basic CRUD Project for Flask and Firebase for HackOSS workshop
 # Run flask project
     - flask --app main run --debug
 
-    
+# Helpful documentations   
+   - [Firebase Code Documentation](https://firebase.google.com/docs/firestore/manage-data/add-data)
+   - [Flask Code Documentation](https://flask.palletsprojects.com/en/3.0.x/quickstart/#a-minimal-application)
+   - [HTML Template - Jinja Documentation](https://palletsprojects.com/p/jinja/)
