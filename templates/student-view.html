@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" href='/static/css/student-view.css' />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Edit Student Details</h1>
+        <form id="updateForm" method="POST">
+            <div class="student-info">
+                <label for="name">Name:</label>
+                <input type="text" id="name" value={{student.get("name")}} name="name"  >
+            </div>
+            <div class="student-info">
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" name="grade" value={{student.get("grade")}} >
+            </div>
+            <button type="submit" id="updateButton">Update Student</button>
+        </form>
+    </div>
+    <script>
+        window.onload = function () {
+            const currentUrl = window.location.href;
+            const urlSegments = currentUrl.split("/");
+            const studentId = urlSegments[urlSegments.length - 1];
+    
+            const form = document.getElementById("updateForm");
+            form.action = `/students/${studentId}/update`;
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+/* styles.css */
+
+body {
+    background-color: lightblue;
+}
+
+.student-table-wrapper {
+    text-align: center;
+}
+
+/* Style the table */
+table {
+    width: 70%;
+    text-align: left;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* Style table headers */
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Style table cells */
+td {
+    padding: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Style the edit icon */
+.edit-icon {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 18px;
+}
+
+.delete-icon {
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+}
+
+.create-button-wrapper {
+    width: 70%;
+    text-align: right;
+    margin: 0 auto;
+}
+
+.create-button {
+    text-align: right;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.create-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" href='/static/css/students.css' />
+
+    <!-- import fontawesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="student-table-wrapper">
+        <div>
+
+        </div>
+        <h1>Student Dashboard</h1>
+        <div class="create-button-wrapper">
+            <button class="create-button" onClick="navigate('/create')">Create Student</button>
+        </div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for oneStudent in students %}
+                <tr>
+                    <td class="hidden">{{oneStudent.get('id')}}</td>
+                    <td>{{loop.index}}</td>
+                    <td>{{oneStudent.get('name') or 'N/A'}}</td>
+                    <td>{{oneStudent.get('grade') or 'N/A'}}</td>
+                    <td>
+                        <span class="edit-icon" onclick="navigate(`/{{oneStudent.get('id')}}`)"><i class="fa-solid fa-pen"></i></span>
+                        <span class="delete-icon" onclick="navigate(`/{{oneStudent.get('id')}}/delete`)"><i class="fa-solid fa-trash"></i></span>
+                    </td>
+
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function navigate(page) {
+            const currentUrl = window.location.href;
+            const baseUrl = currentUrl.split('?')[0]; // Remove query parameters if any
+            const relativeUrl = `${baseUrl}/${page}`;
+
+            // Navigate to the new relative URL
+            window.location.href = relativeUrl;
+        }
+        
+    </script>
+
+</body>
+
+</html>
