@@ -12,7 +12,7 @@ Basic CRUD Project for Flask and Firebase for HackOSS workshop
 # Set up python virtual environment for project
     set up virtual environment
     - py -3.12 -m venv .venv
-    - python -m venv .env/Scripts/activate
+    - .venv/Scripts/activate
     
     install flask / firebase modules
     - pip install flask
